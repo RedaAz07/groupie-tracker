@@ -5,8 +5,10 @@ import (
 	"fmt"
 	"net/http"
 
+	"groupie/helpers"
 	tools "groupie/tools"
 )
+var Artists []tools.Artists
 
 func GroupieFunc(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
@@ -28,15 +30,14 @@ func GroupieFunc(w http.ResponseWriter, r *http.Request) {
 	}
 	defer res.Body.Close()
 
-	var post []tools.Artists
 	Fetch_locations("https://groupietrackers.herokuapp.com/api/locations")
 	Fetch_dates("https://groupietrackers.herokuapp.com/api/dates")
 	Fetch_relation("https://groupietrackers.herokuapp.com/api/relation")
-	err = json.NewDecoder(res.Body).Decode(&post)
+	err = json.NewDecoder(res.Body).Decode(&Artists)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	tools.Tp.ExecuteTemplate(w, "index.html", post)
+	helpers.RenderTemplates(w, "index.html", Artists,200)
 }

@@ -22,5 +22,5 @@ func StyleFunc(w http.ResponseWriter, r *http.Request) {
 		tools.Tp.ExecuteTemplate(w, "statusPage.html", errore)
 		return
 	}
-	http.StripPrefix("/styles", http.FileServer(http.Dir("styles"))).ServeHTTP(w, r)
+	http.StripPrefix("/static", http.FileServer(http.Dir("static"))).ServeHTTP(w, r)
 }

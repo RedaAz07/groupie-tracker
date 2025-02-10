@@ -19,8 +19,9 @@ func main() {
 	}
 
 	// Register handlers
-	http.HandleFunc("/styles/", handler.StyleFunc)
+	http.HandleFunc("/static/", handler.StyleFunc)
 	http.HandleFunc("/", handler.GroupieFunc)
+	http.HandleFunc("/details/", handler.DetailFunc)
 	fmt.Println("Server running at http://localhost:8080/")
 	http.ListenAndServe(":8080", nil)
 }
