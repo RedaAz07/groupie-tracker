@@ -5,14 +5,14 @@ import (
 	"net/http"
 	"text/template"
 
-	utils "groupie/Tools"
 	"groupie/handler"
+	tools "groupie/tools"
 )
 
 func main() {
 	var err error
 	// parse all the html file from the template folder to variable Tp
-	utils.Tp, err = template.ParseGlob("template/*.html")
+	tools.Tp, err = template.ParseGlob("template/*.html")
 	if err != nil {
 		fmt.Println("Error parsing templates: ", err)
 		return

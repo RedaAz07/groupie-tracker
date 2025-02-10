@@ -1,10 +1,11 @@
 package handler
 
 import (
-	tools "groupie/Tools"
 	"net/http"
 	"os"
 	"strings"
+
+	tools "groupie/tools"
 )
 
 func StyleFunc(w http.ResponseWriter, r *http.Request) {
