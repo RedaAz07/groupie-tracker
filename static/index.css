@@ -7,6 +7,13 @@
 html {
   scroll-behavior: smooth;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  height: 100vh;
+  background-color: #9785c5 ;
+}
 #up:target {
   scroll-margin-top: 70px;
   animation: scrollDelay 1s ease-in-out;
@@ -15,12 +22,6 @@ html {
   text-decoration: none;
   color: white;
   display: block;
-}
-body::-webkit-scrollbar {
-  display: none;
-}
-body {
-  background-color:#243B53;
 }
 .title a {
   color: rgb(255, 255, 255);
@@ -38,8 +39,8 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #0A192F;
-  box-shadow: 0px 2px 7px rgb(144, 134, 204);
+  background: #393f88;
+  box-shadow: 0px 2px 7px rgb(200, 192, 248);
 }
 .users a {
   color: white;
@@ -104,7 +105,39 @@ nav {
   height: 40px;
 }
 
-/* Media Query */
+/* Animations */
+@keyframes scrollDelay {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes group-cards {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes navbar {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
 @media (max-width: 1200px) {
   .card {
     width: 280px;
@@ -142,13 +175,11 @@ nav {
     font-size: 18px;
   }
 }
-
 @media (max-width: 600px) {
   .card {
     width: 320px;
   }
 }
-
 @media (max-width: 400px) {
   nav {
     padding: 0 !important;
@@ -158,37 +189,5 @@ nav {
   }
   .card {
     width: 260px;
-  }
-}
-
-/* Animations */
-@keyframes scrollDelay {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes group-cards {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes navbar {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px);
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
