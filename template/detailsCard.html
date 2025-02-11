@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail card</title>
+    <link rel="stylesheet" href="/static/card_Detail.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detail card</title>
-  <link rel="stylesheet" href="/static/card-detail.css">
-</head>
+  <body>
+    <div class="countainer">
+      <h1>{{.Name}}</h1>
+      <div class="card-detail">
+        <div class="image">
+          <img src="{{.Image}}" alt="Artist Image" />
+        </div>
+        <div class="description">
 
-<body>
-  <div class="countainer">
-    <div class="card-detail">
-      <div class="image">
-        <img src="{{.Image}}" alt="Artist Image" />
+          <h2>Members:</h2>
+          <ul>
+            {{range .Members}}
+            <li>{{.}}</li>
+            {{end}}
+          </ul>
+
+          <h2>Creation Date: {{.CreationDate}}</h2>
+          <p>First Album: {{.FirstAlbum}}</p>
+
+          <h2>Concert Locations:</h2>
+          <p>{{.Locations}}</p>
+
+          <h2>Concert Dates:</h2>
+          <p>{{.ConcertDates}}</p>
+
+          <h2>Relations:</h2>
+          <p>{{.Relations}}</p>
+        </div>
       </div>
-
-      <div class="description">
-        <h1>{{.Name}}</h1>
-
-        <h2>Members:</h2>
-        <ul>
-          {{range .Members}}
-          <li>{{.}}</li>
-          {{end}}
-        </ul>
-
-        <h2>Creation Date: {{.CreationDate}}</h2>
-        <P>First Album: {{.FirstAlbum}}</P>
-
-        <h2>Concert Locations:</h2>
-        <p>{{.Locations}}</p>
-
-        <h2>Concert Dates:</h2>
-        <p>{{.ConcertDates}}</p>
-
-        <h2>Relations:</h2>
-        <p>{{.Relations}}</p>
-      </div>
-    </div>
       <a href="/" class="go-back">Go back to groups-card</a>
-  </div>
-</body>
-
+    </div>
+  </body>
 </html>

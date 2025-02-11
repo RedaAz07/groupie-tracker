@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="/static/index.css" />
   </head>
   <body>
-    <div class="countainer">
-      <nav>
-        <div class="title">
-          <a href="/">Groupie tracker</a>
-        </div>
-        <div class="users">
-          <a href="https://github.com/AhmedBaid">abaid</a>
-          <a href="https://github.com/RedaAz07">ranniz</a>
-        </div>
-      </nav>
-      <div class="cards-groups">
-        {{range .}}
-        <a class="lien" href="/details?id={{.Id}}">
-          <div class="card">
-            <img src="{{.Image}}" alt="lien" />
-            <h2>{{.Name}}</h2>
-          </div>
-        </a>
-        {{end}}
+    <nav>
+      <div class="title">
+        <a href="/">Groupie tracker</a>
       </div>
+      <div class="users">
+        <a href="https://github.com/AhmedBaid">abaid</a>
+        <a href="https://github.com/RedaAz07">ranniz</a>
+      </div>
+    </nav>
+    <div class="cards-groups" id="up">
+      {{range .}}
+      <a class="lien" href="/details?id={{.Id}}">
+        <div class="card">
+          <img src="{{.Image}}" alt="lien" />
+          <h2>{{.Name}}</h2>
+        </div>
+      </a>
+      {{end}}
     </div>
+    <a href="#up" class="up">
+      <img src="/static/images/up.png" alt="up">
+    </a>
   </body>
 </html>
