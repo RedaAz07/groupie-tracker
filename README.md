@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 Groupie Tracker is a web application that fetches and displays data about music artists, their concerts, and related information from an API. Users can browse through artist details and concert locations in a structured and interactive manner.
 
-## 📁 Project Structure
+## 💁️ Project Structure
 The project follows a modular structure to ensure clean and maintainable code:
 
 ```
@@ -13,15 +13,21 @@ GROUPIE-TRACKER/
 │
 ├── handler/                 # Handles HTTP requests
 │   ├── Detail_Func.go       # Handles artist details page
-│   ├── Fetch_Data.go        # Fetches data from API
 │   ├── Groupie_Func.go      # Handles main page request
 │   ├── Style_Func.go        # Manages styles for the website
 │
 ├── helpers/
-│   └── renderTemplates.go   # Utility for rendering templates
+│   ├── fetchingById.go      # Fetches data by artist ID
+│   ├── renderTemplates.go   # Utility for rendering templates
+│
+├── routes/
+│   ├── routes.go            # Handles routing for the application
 │
 ├── static/
-│   └── style.css            # Styling for the website
+│   ├── images/              # Stores static images
+│   ├── card_Detail.css      # Styling for artist details page
+│   ├── index.css            # Styling for homepage
+│   ├── status_Page.css      # Styling for status/error pages
 │
 ├── template/                # HTML templates
 │   ├── detailsCard.html     # Template for artist details
@@ -29,13 +35,13 @@ GROUPIE-TRACKER/
 │   ├── statusPage.html      # Error/status page template
 │
 ├── tools/
-│   └── Tools.go             # Contains data structures and utility functions
+│   ├── Tools.go             # Contains data structures and utility functions
 │
 ├── go.mod                   # Go module file
 └── README.md                # Project documentation
 ```
 
-## 🔧 Features
+## 🛠 Features
 - Fetch and display artist information dynamically.
 - View artist details, including name, image, members, and concerts.
 - Handle 404 and error pages gracefully.
@@ -64,7 +70,7 @@ GROUPIE-TRACKER/
    http://localhost:8080
    ```
 
-## 📡 API Source
+## 📺 API Source
 This project fetches data from the [Groupie Tracker API](https://groupietrackers.herokuapp.com/api/).
 
 ## 🛠 Technologies Used
