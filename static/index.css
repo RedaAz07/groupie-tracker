@@ -258,17 +258,17 @@ nav {
 
 /* Responsive design */
 
-/* @media (min-width: 1350px) and (max-width: 1600px) {
+@media (min-width: 1350px) and (max-width: 1600px) {
   nav {
     width: 100%;
     padding: 15px 130px;
   }
   .card {
-    width: 260px;
-    margin: 10px;
+    width: 250px;
+    margin:10px;
   }
 
-} */
+}
 
 @media (max-width: 1350px) {
   .lien h2 {
