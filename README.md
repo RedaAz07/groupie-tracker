@@ -1,7 +1,30 @@
-# Groupie Tracker
+# Groupie Trackers
+Groupie Trackers is a Go-based backend application that interacts with a RESTful API to fetch and manipulate data about musical artists, their concert locations, dates, and relationships. This project aims to create a user-friendly website that visualizes this data effectively.
 
 ## 📌 Project Overview
 Groupie Tracker is a web application that fetches and displays data about music artists, their concerts, and related information from an API. Users can browse through artist details and concert locations in a structured and interactive manner.
+
+## Objectives
+The application connects to an API with four main parts:
+
+- Artists: Information about bands and artists, including their names, images, formation year, first album date, and members.
+- Locations: Locations of their past and/or upcoming concerts.
+- Dates: Dates of their past and/or upcoming concerts.
+- Relation: Links between artists, dates, and locations.
+- The goal is to build a website that displays this information using various data visualizations such as blocks, cards, tables, lists, and graphics.
+
+## Features
+Fetch and display artist information, concert dates, and locations.
+Visualize data through different UI components.
+Handle client-server communication effectively.
+Implement features based on client-triggered actions.
+## Technology Stack
+Backend: Go (Golang)
+Frontend: HTML/CSS for the user interface
+API: RESTful API for data retrieval
+# Groupie Tracker
+
+
 
 ## 💁️ Project Structure
 The project follows a modular structure to ensure clean and maintainable code:
