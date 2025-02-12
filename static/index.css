@@ -257,7 +257,6 @@ nav {
 }
 
 /* Responsive design */
-
 @media (min-width: 1350px) and (max-width: 1600px) {
   nav {
     width: 100%;
