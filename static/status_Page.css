@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: linear-gradient(135deg, #190644, #3e2c61);
+  background-color: black;
 }
 
 .container {
@@ -29,9 +29,9 @@ body {
 }
 
 h1 {
-  font-size: 180px;
+  font-size: 160px;
   font-weight: bold;
-  color: white;
+  color: #009F18;
 }
 
 h2 {
@@ -56,7 +56,7 @@ p {
 
 .btn {
   text-decoration: none;
-  background: #732ad8;
+  background-color: #03db24;
   color: white;
   padding: 12px 32px;
   border-radius: 15px;
@@ -67,7 +67,7 @@ p {
 }
 
 .btn:hover {
-  background: #580ece;
+  background-color: #009F18;
 }
 
 .image img {
