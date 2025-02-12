@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"text/template"
 
-	"groupie/handler"
+	"groupie/routes"
 	tools "groupie/tools"
 )
 
@@ -17,11 +17,9 @@ func main() {
 		fmt.Println("Error parsing templates: ", err)
 		return
 	}
-
 	// Register handlers
-	http.HandleFunc("/static/", handler.StyleFunc)
-	http.HandleFunc("/", handler.GroupieFunc)
-	http.HandleFunc("/details/", handler.DetailFunc)
+	routes.Route()
+	//  run   the serve
 	fmt.Println("Server running at http://localhost:8080/")
 	http.ListenAndServe(":8080", nil)
 }

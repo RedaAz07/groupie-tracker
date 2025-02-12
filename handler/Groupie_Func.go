@@ -2,42 +2,40 @@ package handler
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"groupie/helpers"
 	tools "groupie/tools"
 )
+
 var Artists []tools.Artists
 
 func GroupieFunc(w http.ResponseWriter, r *http.Request) {
+	// check the path
 	if r.URL.Path != "/" {
-		errore := tools.ErrorPage{
-			Code:         http.StatusNotFound,
-			ErrorMessage: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
-		}
-
-		w.WriteHeader(http.StatusNotFound)
 		// execute the not found  template
-		tools.Tp.ExecuteTemplate(w, "statusPage.html", errore)
+		helpers.RenderTemplates(w, "statusPage.html", tools.ErrorNotFound, http.StatusNotFound)
+		return
+	}
+	// check the methd
+	if r.Method != http.MethodGet {
+		// execute the not found  template
+		helpers.RenderTemplates(w, "statusPage.html", tools.ErrorMethodnotAll, http.StatusMethodNotAllowed)
 		return
 	}
 	url := "https://groupietrackers.herokuapp.com/api/artists"
+	// get the api data
 	res, err := http.Get(url)
 	if err != nil {
-		fmt.Println("Error fetching data: ", err)
+		helpers.RenderTemplates(w, "statusPage.html", tools.ErrorInternalServerErr, http.StatusInternalServerError)
 		return
 	}
 	defer res.Body.Close()
-
-	Fetch_locations("https://groupietrackers.herokuapp.com/api/locations")
-	Fetch_dates("https://groupietrackers.herokuapp.com/api/dates")
-	Fetch_relation("https://groupietrackers.herokuapp.com/api/relation")
+	// decode the jsone data
 	err = json.NewDecoder(res.Body).Decode(&Artists)
 	if err != nil {
-		fmt.Println(err)
+		helpers.RenderTemplates(w, "statusPage.html", tools.ErrorInternalServerErr, http.StatusInternalServerError)
 		return
 	}
-
-	helpers.RenderTemplates(w, "index.html", Artists,200)
+	helpers.RenderTemplates(w, "index.html", Artists, 200)
 }

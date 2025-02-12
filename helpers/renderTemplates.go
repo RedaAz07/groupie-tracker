@@ -1,20 +1,18 @@
 package helpers
 
 import (
-	tools "groupie/tools"
 	"bytes"
 	"net/http"
+
+	"groupie/tools"
 )
 
-func RenderTemplates(w http.ResponseWriter, temp string, data interface{}, status int) {
+func RenderTemplates(w http.ResponseWriter, temp string, post interface{}, status int) {
 	var buf bytes.Buffer
-	err := tools.Tp.ExecuteTemplate(&buf, temp, data)
+	// exucut the template with buffer to chekc if there is an error in  our template
+	err := tools.Tp.ExecuteTemplate(&buf, temp, post)
 	if err != nil {
-		errore := tools.ErrorPage{
-			Code:         http.StatusInternalServerError,
-			ErrorMessage: "Something went wrong on our end. Please try again later.",
-		}
-
+		errore := tools.ErrorInternalServerErr
 		w.WriteHeader(http.StatusInternalServerError)
 		tools.Tp.ExecuteTemplate(w, "statusPage.html", errore)
 		return
