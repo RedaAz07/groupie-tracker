@@ -8,7 +8,7 @@ import (
 	"groupie/tools"
 )
 
-func DetailsFunc(w http.ResponseWriter, r *http.Request) {
+func Detail_Card_Func(w http.ResponseWriter, r *http.Request) {
 	// check the method
 	if r.Method != http.MethodGet {
 		// execute the not found  template

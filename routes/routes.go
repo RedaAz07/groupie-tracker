@@ -7,7 +7,7 @@ import (
 )
 
 func Route() {
-	http.HandleFunc("/static/", handler.StyleFunc)
-	http.HandleFunc("/details/", handler.DetailsFunc)
-	http.HandleFunc("/", handler.GroupieFunc)
+	http.HandleFunc("/static/", handler.Style_Func)
+	http.HandleFunc("/details/", handler.Detail_Card_Func)
+	http.HandleFunc("/", handler.Groupie_Func)
 }

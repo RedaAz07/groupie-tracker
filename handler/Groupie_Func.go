@@ -10,7 +10,7 @@ import (
 
 var Artists []tools.Artists
 
-func GroupieFunc(w http.ResponseWriter, r *http.Request) {
+func Groupie_Func(w http.ResponseWriter, r *http.Request) {
 	// check the path
 	if r.URL.Path != "/" {
 		// execute the not found  template

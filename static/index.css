@@ -6,18 +6,13 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 body::-webkit-scrollbar {
   display: none;
 }
-
-html {
+html{
   scroll-behavior: smooth;
 }
-
 body {
   background-color: #0a0a0a;
   transition: 0.5s;
@@ -98,7 +93,7 @@ label svg {
 }
 
 label svg.sun {
-  color: #7e7e7e;
+  color: yellow;
   font-weight: bold;
   left: 13px;
   top: 3px;
@@ -125,7 +120,6 @@ input[type="checkbox"]:checked + label svg.moon {
 
 #up:target {
   scroll-margin-top: 70px;
-  animation: animation 1s ease-in-out;
 }
 
 .lien {
@@ -168,7 +162,7 @@ nav {
 .cards-groups {
   width: 80%;
   margin: auto;
-  animation: animation 1.5s ease-in-out;
+  animation: cards-animation 1.5s ease-in-out;
   margin-top: 80px;
   display: flex;
   align-items: center;
@@ -234,7 +228,7 @@ nav {
 }
 
 /* Animations */
-@keyframes animation {
+@keyframes cards-animation {
   0% {
     opacity: 0;
     transform: translateY(-20px);

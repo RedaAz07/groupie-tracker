@@ -8,7 +8,7 @@ import (
 	tools "groupie/tools"
 )
 
-func StyleFunc(w http.ResponseWriter, r *http.Request) {
+func Style_Func(w http.ResponseWriter, r *http.Request) {
 	filePath := strings.TrimPrefix(r.URL.Path, "/")
 	File, err := os.Stat(filePath)
 	if err != nil || File.IsDir() {
