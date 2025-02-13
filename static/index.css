@@ -27,7 +27,7 @@ body:has(#darkmode-toggle:checked) {
   background-color: rgb(249, 237, 214);
 }
 body:has(#darkmode-toggle:checked) .card h2 {
-  color: #009f18;
+  color: #00ff26;
 }
 body:has(#darkmode-toggle:checked) .title a,
 body:has(#darkmode-toggle:checked) .users a {
@@ -95,7 +95,7 @@ label svg {
 label svg.sun {
   color: yellow;
   font-weight: bold;
-  left: 14px;
+  left: 13px;
   top: 4px;
   transition: 0.8s;
 }
@@ -128,7 +128,7 @@ input[type="checkbox"]:checked + label svg.moon {
 }
 
 .title a {
-  color: #009f18;
+  color: #00ff26;
   text-decoration: none;
   font-size: 32px;
 }
@@ -145,7 +145,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   background: #0a0a0a;
-  box-shadow: 0px 1px 2px #009f18;
+  box-shadow: 0px 1px 2px #00ff26;
 }
 
 .users {
@@ -153,12 +153,26 @@ nav {
 }
 
 .users a {
-  color: #009f18;
+  position: relative;
+  color: #00ff26;
+  letter-spacing: 0.3px;
   text-decoration: none;
   font-size: 17px;
   margin-left: 15px;
 }
-
+.users a::after{
+  content: "";
+  position: absolute;
+  background-color: #00ff26;
+  height: 2px;
+  width: 0;
+  left: 0;
+  top: 22px;
+  transition: 0.5s;
+}
+.users a:hover::after{
+  width: 100%;
+}
 .cards-groups {
   width: 80%;
   margin: auto;
@@ -185,7 +199,7 @@ nav {
 
 .card:hover {
   transform: scale(0.9);
-  box-shadow: 0px 5px 10px #009f18;
+  box-shadow: 0px 5px 10px #06e227;
 }
 
 .card img {
@@ -198,7 +212,7 @@ nav {
 .card h2 {
   color: white;
   margin-top: 15px;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
 }
@@ -212,19 +226,19 @@ nav {
   position: fixed;
   bottom: 14px;
   right: 15px;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
-  background-color: #009f18;
-}
-
-.up:hover {
   background-color: #06cc24;
 }
 
+.up:hover {
+  background-color: #0bca27;
+}
+
 .up img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 /* Animations */
@@ -302,6 +316,14 @@ nav {
 }
 
 @media (max-width: 660px) {
+  .up {
+    height: 35px;
+    width: 35px;
+  }
+  .up img {
+    width: 25px;
+    height: 25px;
+  }
   nav {
     padding: 15px 40px;
   }
