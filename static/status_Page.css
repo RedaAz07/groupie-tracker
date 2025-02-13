@@ -31,7 +31,7 @@ body {
 h1 {
   font-size: 160px;
   font-weight: bold;
-  color: #009F18;
+  color: #00ff26;
 }
 
 h2 {
@@ -56,7 +56,7 @@ p {
 
 .btn {
   text-decoration: none;
-  background-color: #03db24;
+  background-color: #00ff26;
   color: black;
   padding: 12px 32px;
   border-radius: 15px;
@@ -64,10 +64,11 @@ p {
   transition: 0.3s;
   text-align: center;
   cursor: pointer;
+  width: 170px;
 }
 
 .btn:hover {
-  background-color: #009F18;
+  background-color: #14df32;
 }
 
 .image img {

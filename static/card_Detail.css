@@ -180,6 +180,8 @@ nav {
   box-shadow: 0px 1px 2px #00ff26;
 }
 .detailCard {
+  flex-wrap: wrap;
+  height: 100%;
   width: 100%;
   position: absolute;
   top: 50%;
@@ -207,6 +209,7 @@ nav {
   color: white;
 }
 .image-text img {
+  filter: contrast(150%);
   cursor: pointer;
   animation: floatImage 2s ease-in-out infinite;
   border-radius: 30px;
