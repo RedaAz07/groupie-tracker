@@ -5,9 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/* body::-webkit-scrollbar {
-  display: none;
-} */
+
 .firstMerge .members ul::-webkit-scrollbar,
 .firstMerge .locations ul::-webkit-scrollbar {
   display: none;
@@ -73,7 +71,18 @@ body:has(#darkmode-toggle:checked) .title a,
 body:has(#darkmode-toggle:checked) .users a {
   color: black;
 }
+body:has(#darkmode-toggle:checked) .list svg{
+  fill: black;
+}
+body:has(#darkmode-toggle:checked) .image-text h1,
+body:has(#darkmode-toggle:checked) .list li,
+body:has(#darkmode-toggle:checked) .image-text li,
+body:has(#darkmode-toggle:checked) .image-text li,
+body:has(#darkmode-toggle:checked) .lien,
+body:has(#darkmode-toggle:checked) .text{  
 
+    color: black;
+}
 .mode {
   display: flex;
   align-items: center;
@@ -188,6 +197,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
 }
 .image-text h1 {
@@ -210,11 +220,11 @@ nav {
 }
 .firstMerge .members ul,.firstMerge .locations ul,.secondMerge .concert-dates ul,.secondMerge .relations  {
   padding: 15px 20px;
-  max-height: 280px;
-  max-width: 300px;
+  max-height: 300px;
+  max-width: 320px;
   overflow: auto;
-  height: 280px;
-  width: 300px;
+  height: 300px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   background-color: #141414;
@@ -236,6 +246,22 @@ nav {
   border-radius: 20px;
   background-color: #132031;
   color: white;
+}
+.image-text ul li{
+  list-style-type: none;
+}
+.image-text ul {
+  margin-top: 10px;
+}
+.list{
+  margin-top:5px;
+  width: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.list svg{
+  fill: white;
 }
 .secondMerge .relations details p{
   list-style-type: none;
