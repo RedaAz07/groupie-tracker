@@ -7,10 +7,10 @@ import (
 	"groupie/tools"
 )
 
-func RenderTemplates(w http.ResponseWriter, temp string, post interface{}, status int) {
+func RenderTemplates(w http.ResponseWriter, temp string, data interface{}, status int) {
 	var buf bytes.Buffer
 	// exucut the template with buffer to chekc if there is an error in  our template
-	err := tools.Tp.ExecuteTemplate(&buf, temp, post)
+	err := tools.Tp.ExecuteTemplate(&buf, temp, data)
 	if err != nil {
 		errore := tools.ErrorInternalServerErr
 		w.WriteHeader(http.StatusInternalServerError)
