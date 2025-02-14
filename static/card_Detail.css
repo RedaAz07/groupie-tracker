@@ -10,22 +10,27 @@
 .firstMerge .locations ul::-webkit-scrollbar {
   display: none;
 }
-.secondMerge .concert-dates ul::-webkit-scrollbar ,
+
+.secondMerge .concert-dates ul::-webkit-scrollbar,
 .secondMerge .relations::-webkit-scrollbar {
   display: none;
 }
+
 html {
   scroll-behavior: smooth;
   height: 100vh;
 }
+
 body {
   background-color: #141414;
   transition: 0.5s;
 }
+
 .lien {
   text-decoration: none;
   display: block;
 }
+
 .users {
   display: flex;
 }
@@ -38,7 +43,8 @@ body {
   font-size: 17px;
   margin-left: 15px;
 }
-.users a::after{
+
+.users a::after {
   content: "";
   position: absolute;
   background-color: #00ff26;
@@ -48,9 +54,11 @@ body {
   top: 22px;
   transition: 0.5s;
 }
-.users a:hover::after{
+
+.users a:hover::after {
   width: 100%;
 }
+
 .title a {
   color: #00ff26;
   text-decoration: none;
@@ -61,33 +69,39 @@ body {
 nav:has(#darkmode-toggle:checked) {
   background-color: rgb(249, 237, 214);
 }
+
 body:has(#darkmode-toggle:checked) {
   background-color: rgb(249, 237, 214);
 }
+
 body:has(#darkmode-toggle:checked) .card h2 {
   color: #00ff26;
 }
+
 body:has(#darkmode-toggle:checked) .title a,
 body:has(#darkmode-toggle:checked) .users a {
   color: black;
 }
-body:has(#darkmode-toggle:checked) .list svg{
+
+body:has(#darkmode-toggle:checked) .list svg {
   fill: black;
 }
+
 body:has(#darkmode-toggle:checked) .image-text h1,
 body:has(#darkmode-toggle:checked) .list li,
 body:has(#darkmode-toggle:checked) .image-text li,
 body:has(#darkmode-toggle:checked) .image-text li,
 body:has(#darkmode-toggle:checked) .lien,
-body:has(#darkmode-toggle:checked) .text{  
-
-    color: black;
+body:has(#darkmode-toggle:checked) .text {
+  color: black;
 }
+
 .mode {
   display: flex;
   align-items: center;
   margin: 0 15px;
 }
+
 .mode label {
   width: 45px;
   height: 23px;
@@ -120,11 +134,11 @@ input[type="checkbox"] {
   visibility: hidden;
 }
 
-input[type="checkbox"]:checked + label {
+input[type="checkbox"]:checked+label {
   background-color: #ebebeb;
 }
 
-input[type="checkbox"]:checked + label::after {
+input[type="checkbox"]:checked+label::after {
   left: 43px;
   transform: translateX(-100%);
   background: linear-gradient(180deg, #ffcc89, #d8860b);
@@ -157,18 +171,19 @@ label svg.moon {
   transition: 0.5s;
 }
 
-input[type="checkbox"]:checked + label svg.sun {
+input[type="checkbox"]:checked+label svg.sun {
   fill: white;
 }
 
-input[type="checkbox"]:checked + label svg.moon {
+input[type="checkbox"]:checked+label svg.moon {
   fill: #7e7e7e;
 }
+
 /*End of Light mode and Dark mod*/
 
 nav {
   z-index: 3;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   height: 70px;
@@ -179,20 +194,19 @@ nav {
   background: #0a0a0a;
   box-shadow: 0px 1px 2px #00ff26;
 }
+
 .detailCard {
-  flex-wrap: wrap;
-  height: 100%;
+  height: 100vh;
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
   color: white;
   margin-top: 70px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .image-text {
   width: 350px;
   height: 360px;
@@ -202,12 +216,14 @@ nav {
   justify-content: center;
   text-align: center;
 }
+
 .image-text h1 {
   font-size: 30px;
   font-weight: bold;
   margin-top: 30px;
   color: white;
 }
+
 .image-text img {
   filter: contrast(150%);
   cursor: pointer;
@@ -216,12 +232,18 @@ nav {
   width: 80%;
   height: 80%;
 }
-.firstMerge ,.secondMerge{
+
+.firstMerge,
+.secondMerge {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.firstMerge .members ul,.firstMerge .locations ul,.secondMerge .concert-dates ul,.secondMerge .relations  {
+
+.firstMerge .members ul,
+.firstMerge .locations ul,
+.secondMerge .concert-dates ul,
+.secondMerge .relations {
   padding: 15px 20px;
   max-height: 300px;
   max-width: 320px;
@@ -234,15 +256,22 @@ nav {
   border-radius: 30px;
   border: 1px solid #3cff0091;
 }
-.firstMerge .members h2,.firstMerge .locations h2,.secondMerge .concert-dates h2{
+
+.firstMerge .members h2,
+.firstMerge .locations h2,
+.secondMerge .concert-dates h2 {
   text-align: center;
   margin-bottom: 5px;
 }
-.text{
+
+.text {
   position: relative;
   top: 15px;
 }
-.firstMerge .members ul li ,.firstMerge .locations ul li ,.secondMerge .concert-dates ul li{
+
+.firstMerge .members ul li,
+.firstMerge .locations ul li,
+.secondMerge .concert-dates ul li {
   list-style-type: none;
   padding: 10px 20px;
   margin: 10px 0;
@@ -250,23 +279,28 @@ nav {
   background-color: #132031;
   color: white;
 }
-.image-text ul li{
+
+.image-text ul li {
   list-style-type: none;
 }
+
 .image-text ul {
   margin-top: 10px;
 }
-.list{
-  margin-top:5px;
+
+.list {
+  margin-top: 5px;
   width: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.list svg{
+
+.list svg {
   fill: white;
 }
-.secondMerge .relations details p{
+
+.secondMerge .relations details p {
   list-style-type: none;
   padding: 10px 20px;
   margin: 10px 0;
@@ -274,10 +308,13 @@ nav {
   background-color: #132031e8;
   color: #00ff26;
 }
-.firstMerge .locations,.secondMerge .relations {
+
+.firstMerge .locations,
+.secondMerge .relations {
   margin-top: 20px;
 }
-.secondMerge .relations details summary{
+
+.secondMerge .relations details summary {
   cursor: pointer;
   list-style-type: none;
   padding: 10px 20px;
@@ -292,10 +329,63 @@ nav {
   0% {
     transform: translate3d(0, 0, 0);
   }
+
   50% {
     transform: translate3d(0, -30px, 0);
   }
+
   100% {
     transform: translate3d(0, 0, 0);
+  }
+}
+
+/* Responsive design */
+@media (min-width: 1350px) and (max-width: 1600px) {
+  nav {
+    width: 100%;
+    padding: 15px 130px;
+  }
+}
+
+@media (max-width: 1350px) {
+  nav {
+    padding: 15px 120px;
+  }
+}
+
+@media (max-width: 850px) {
+  .title a {
+    font-size: 28px;
+  }
+  nav {
+    padding: 15px 90px;
+  }
+}
+
+@media (max-width: 660px) {
+  nav {
+    padding: 15px 40px;
+  }
+  .users a {
+    display: none;
+  }
+  .title a {
+    font-size: 32px;
+  }
+}
+@media (max-width: 400px) {
+  nav {
+    padding: 15px 5px;
+  }
+  .title a {
+    font-size: 30px;
+  }
+}
+@media (max-width: 320px) {
+  nav {
+    padding: 15px 3px;
+  }
+  .title a {
+    font-size: 25px;
   }
 }
