@@ -3,8 +3,9 @@ package helpers
 import (
 	"bytes"
 	"fmt"
-	"groupie/tools"
 	"net/http"
+
+	"groupie/tools"
 )
 
 func RenderTemplates(w http.ResponseWriter, temp string, data interface{}, status int) {

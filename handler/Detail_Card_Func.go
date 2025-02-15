@@ -70,5 +70,5 @@ func Detail_Card_Func(w http.ResponseWriter, r *http.Request) {
 		Dates:     &dates,
 		Relations: &relations,
 	}
-	helpers.RenderTemplates(w, "detailsCard.html", fetching, 200)
+	helpers.RenderTemplates(w, "detailsCard.html", fetching, http.StatusOK)
 }

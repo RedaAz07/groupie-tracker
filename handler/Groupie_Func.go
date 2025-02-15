@@ -37,5 +37,5 @@ func Groupie_Func(w http.ResponseWriter, r *http.Request) {
 		helpers.RenderTemplates(w, "statusPage.html", tools.ErrorInternalServerErr, http.StatusInternalServerError)
 		return
 	}
-	helpers.RenderTemplates(w, "index.html", Artists, 200)
+	helpers.RenderTemplates(w, "index.html", Artists, http.StatusOK)
 }
