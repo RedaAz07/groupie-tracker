@@ -33,6 +33,9 @@ body:has(#darkmode-toggle:checked) .title a,
 body:has(#darkmode-toggle:checked) .users a {
   color: black;
 }
+body:has(#darkmode-toggle:checked) .users a::after {
+  background-color: black;
+}
 
 .mode {
   display: flex;

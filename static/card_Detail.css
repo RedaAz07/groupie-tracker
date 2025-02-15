@@ -47,13 +47,14 @@ body {
 .users a::after {
   content: "";
   position: absolute;
-  background-color: #00ff26;
   height: 2px;
   width: 0;
   left: 0;
   top: 22px;
   transition: 0.5s;
+  background-color: #00ff26; /* Par défaut en vert (dark mode) */
 }
+
 
 .users a:hover::after {
   width: 100%;
@@ -101,6 +102,9 @@ body:has(#darkmode-toggle:checked) .firstMerge .locations ul,
 body:has(#darkmode-toggle:checked) .secondMerge .concert-dates ul,
 body:has(#darkmode-toggle:checked) .secondMerge .relations {
   border: none;
+}
+body:has(#darkmode-toggle:checked) .users a::after {
+  background-color: black;
 }
 
 
