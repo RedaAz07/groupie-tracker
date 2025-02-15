@@ -1,33 +1,41 @@
-# Groupie Trackers
-Groupie Trackers is a Go-based backend application that interacts with a RESTful API to fetch and manipulate data about musical artists, their concert locations, dates, and relationships. This project aims to create a user-friendly website that visualizes this data effectively.
-
-## 📌 Project Overview
-Groupie Tracker is a web application that fetches and displays data about music artists, their concerts, and related information from an API. Users can browse through artist details and concert locations in a structured and interactive manner.
-
-## Objectives
-The application connects to an API with four main parts:
-
-- Artists: Information about bands and artists, including their names, images, formation year, first album date, and members.
-- Locations: Locations of their past and/or upcoming concerts.
-- Dates: Dates of their past and/or upcoming concerts.
-- Relation: Links between artists, dates, and locations.
-- The goal is to build a website that displays this information using various data visualizations such as blocks, cards, tables, lists, and graphics.
-
-## Features
-Fetch and display artist information, concert dates, and locations.
-Visualize data through different UI components.
-Handle client-server communication effectively.
-Implement features based on client-triggered actions.
-## Technology Stack
-Backend: Go (Golang)
-Frontend: HTML/CSS for the user interface
-API: RESTful API for data retrieval
 # Groupie Tracker
 
+Groupie Tracker is a Go-based web application that interacts with a RESTful API to fetch and display data about musical artists, their concert locations, dates, and relationships. This project aims to provide an intuitive and structured way to visualize this information.
 
+## 📌 Project Overview
 
-## 💁️ Project Structure
-The project follows a modular structure to ensure clean and maintainable code:
+Groupie Tracker is a web application that fetches and presents data about music artists, their concerts, and related details. Users can explore artist information, past and upcoming concert locations, and their relationships with other events.
+
+## Objectives
+
+The application connects to an API containing four key parts:
+
+- **Artists**: Information about bands and artists, including their names, images, formation year, first album date, and members.
+- **Locations**: Locations of their past and/or upcoming concerts.
+- **Dates**: Dates of their past and/or upcoming concerts.
+- **Relations**: Links between artists, dates, and locations.
+
+The main goal is to build a website that presents this information using various UI components, such as cards, lists, and tables.
+
+## Features
+
+✅ Fetch and display artist details dynamically.
+✅ Show concert dates and locations in a structured manner.
+✅ Provide a user-friendly interface.
+✅ Implement efficient client-server communication.
+✅ Handle error pages gracefully.
+
+## 🛠 Technology Stack
+
+- **Backend**: Go (Golang)
+- **Frontend**: HTML/CSS for UI
+- **API**: RESTful API for data retrieval
+
+---
+
+## 💾 Project Structure
+
+The project follows a modular structure for better organization and maintainability:
 
 ```
 GROUPIE-TRACKER/
@@ -35,18 +43,19 @@ GROUPIE-TRACKER/
 │   └── main.go              # Entry point of the application
 │
 ├── handler/                 # Handles HTTP requests
-│   ├── Detail_Func.go       # Handles artist details page
-│   ├── Groupie_Func.go      # Handles main page request
+│   ├── Detail_Card_Func.go  # Handles artist details page
+│   ├── Groupie_Func.go      # Handles main page requests
 │   ├── Style_Func.go        # Manages styles for the website
 │
-├── helpers/
+├── helpers/                 # Helper functions for data fetching and rendering
 │   ├── fetchingById.go      # Fetches data by artist ID
+│   ├── pageDeleted.go       # Handles deleted pages
 │   ├── renderTemplates.go   # Utility for rendering templates
 │
 ├── routes/
 │   ├── routes.go            # Handles routing for the application
 │
-├── static/
+├── static/                  # Static files (CSS, Images, etc.)
 │   ├── images/              # Stores static images
 │   ├── card_Detail.css      # Styling for artist details page
 │   ├── index.css            # Styling for homepage
@@ -57,20 +66,18 @@ GROUPIE-TRACKER/
 │   ├── index.html           # Homepage template
 │   ├── statusPage.html      # Error/status page template
 │
-├── tools/
-│   ├── Tools.go             # Contains data structures and utility functions
+├── tools/                   # Utility functions and data structures
+│   ├── Tools.go             # Contains various helper functions
 │
 ├── go.mod                   # Go module file
+├── Dockerfile               # Docker setup for deployment
 └── README.md                # Project documentation
 ```
 
-## 🛠 Features
-- Fetch and display artist information dynamically.
-- View artist details, including name, image, members, and concerts.
-- Handle 404 and error pages gracefully.
-- Clean and structured project organization.
+---
 
 ## 🚀 Installation & Setup
+
 ### Prerequisites
 - Install [Go](https://go.dev/)
 
@@ -93,16 +100,11 @@ GROUPIE-TRACKER/
    http://localhost:8080
    ```
 
+---
+
 ## 📺 API Source
 This project fetches data from the [Groupie Tracker API](https://groupietrackers.herokuapp.com/api/).
 
-## 🛠 Technologies Used
-- **Go**: Backend development
-- **HTML & CSS**: Frontend
-- **net/http**: Server and routing
-- **encoding/json**: Handling API responses
-- **text/template**: HTML rendering
-
-## 📝 License
+## 📄 License
 This project is open-source and available under the [MIT License](LICENSE).
 
