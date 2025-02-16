@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body::-webkit-scrollbar {
+  display: none;
+}
 .firstMerge .members ul::-webkit-scrollbar,
 .firstMerge .locations ul::-webkit-scrollbar {
   display: none;
