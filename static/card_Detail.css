@@ -5,9 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body::-webkit-scrollbar {
-  display: none;
-}
+
 .firstMerge .members ul::-webkit-scrollbar,
 .firstMerge .locations ul::-webkit-scrollbar {
   display: none;
@@ -371,6 +369,9 @@ nav {
 }
 
 @media (max-width: 1100px) {
+  nav {
+    padding: 15px 40px;
+  }
   .image-text {
     width: 380px;
     height: 400px;
